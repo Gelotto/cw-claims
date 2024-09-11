@@ -1,10 +1,10 @@
 use anybuf::Anybuf;
-use contract::{
+use cosmos_sdk_proto::Any;
+use cw_claims::{
+    models::Config,
     msg::{InstantiateMsg, MigrateMsg},
-    state::models::Config,
     Contract, ContractExecuteMsgFns, ContractQueryMsgFns,
 };
-use cosmos_sdk_proto::Any;
 use cw_orch::{
     anyhow::{self, Ok},
     daemon::{networks, TxSender},

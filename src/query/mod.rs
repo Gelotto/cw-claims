@@ -1,3 +1,4 @@
+pub mod claims;
 pub mod config;
 
 use cosmwasm_std::{Deps, Env};

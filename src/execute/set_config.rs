@@ -1,16 +1,12 @@
-use crate::{
-    error::ContractError,
-    state::{models::Config, storage::CONFIG},
-};
+use crate::{error::ContractError, models::Config};
 use cosmwasm_std::{attr, Response};
 
 use super::Context;
 
 pub fn exec_set_config(
     ctx: Context,
-    config: Config,
+    _config: Config,
 ) -> Result<Response, ContractError> {
-    let Context { deps, .. } = ctx;
-    CONFIG.save(deps.storage, &config)?;
+    let Context { .. } = ctx;
     Ok(Response::new().add_attributes(vec![attr("action", "set_config")]))
 }

@@ -1,4 +1,6 @@
+pub mod claim;
 pub mod set_config;
+pub mod upsert;
 
 use cosmwasm_std::{DepsMut, Env, MessageInfo};
 

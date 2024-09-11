@@ -2,7 +2,7 @@ network             ?= devnet  # network := devnet|mainnet|testnet
 sender              ?= juno16g2rahf5846rxzp3fwlswy08fz8ccuwk03k57y
 build_dir           ?= ./builds
 tag                 ?= dev
-wasm_filename       ?= contract.wasm
+wasm_filename       ?= cw_claims.wasm
 
 # build optimized WASM artifact
 build:
